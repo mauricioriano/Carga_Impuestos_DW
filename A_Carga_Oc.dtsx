@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="A_Carga_Oc"
   DTS:PackageType="5"
-  DTS:VersionBuild="88"
-  DTS:VersionGUID="{E7C862C2-ACD3-4346-855F-DEF945C4A5A0}">
+  DTS:VersionBuild="89"
+  DTS:VersionGUID="{DA42ECCB-0737-4588-BCB2-8D3EDFE95844}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -9903,7 +9903,7 @@ FROM   Impuestos_B_Stage.sap.OC INNER JOIN
         <NodeLayout
           Size="148,41.6"
           Id="Package\ACTUALIZA CAMBIOS EN  MARCA, LINEA, CILINDRAJE, MODELO, CLASE, CARROCERIA, SERVICIO, VALOR, FACTURA"
-          TopLeft="16.466674150361,73.6666672521166" />
+          TopLeft="43.1333397573896,195.866668223275" />
         <NodeLayout
           Size="348.8,41.6"
           Id="Package\ANEXA PLACA NUEVAS\CARGA  EN   DW LOS  OC COMPLETAMENTE NUEVOS"
