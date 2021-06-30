@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="C_Carga_Novedades"
   DTS:PackageType="5"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{FBC66DF2-5F8C-4DB9-8637-CB6E072E2594}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{EDEBF14F-96ED-419E-BDC6-961139CE8581}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -3133,13 +3133,13 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Trunca Tmp NOvedades"
+      DTS:refId="Package\Trunca Tmp NOvedades 11"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tarea Ejecutar SQL"
       DTS:DTSID="{E75F9D49-93A3-4781-8F31-D22AE42A1D88}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Trunca Tmp NOvedades"
+      DTS:ObjectName="Trunca Tmp NOvedades 11"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -3154,7 +3154,7 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{BE5E7A20-6DD9-4FA9-BF99-C2001D42FF7C}"
-      DTS:From="Package\Trunca Tmp NOvedades"
+      DTS:From="Package\Trunca Tmp NOvedades 11"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Carga Novedades" />
@@ -3236,23 +3236,23 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
           Id="Package\Normaliza las Prescripciones"
           TopLeft="522.499979237716,203.20000140508" />
         <NodeLayout
-          Size="192.8,41.6"
-          Id="Package\Trunca Tmp NOvedades"
+          Size="206.4,41.6"
+          Id="Package\Trunca Tmp NOvedades 11"
           TopLeft="21.6666822963287,141.533333822356" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="214.466682296329,159.033333450423">
+          TopLeft="228.066682296329,159.033333450423">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="61.1999906619394,0"
+              EndConnector="47.5999906619393,0"
               Start="0,0"
-              End="53.6999906619394,0">
+              End="40.0999906619393,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="53.6999906619394,0" />
+                    End="40.0999906619393,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
