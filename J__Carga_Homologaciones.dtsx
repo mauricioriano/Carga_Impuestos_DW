@@ -1,0 +1,2339 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/22/2020 7:56:08 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-IPD8IMB"
+  DTS:CreatorName="DESKTOP-IPD8IMB\USUARIO"
+  DTS:DTSID="{E29EA3EB-704E-4954-9C33-B737E68E34C8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LocaleID="9226"
+  DTS:ObjectName="J__Carga_Homologaciones"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{EA38176E-D033-4D89-AEAD-0FFC8446ECFD}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{DF86A5F2-0A64-43E2-B123-52876A7A705D}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{C59F8966-B576-4C93-8C3B-CB88BC44890D}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[Tmp].[TTO_OC_SAP_HOMO_RUNT_]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Organismos_Tto_KEY]"
+                          cachedDataType="i4"
+                          cachedName="Organismos_Tto_KEY"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Organismos_Tto_KEY]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Organismos_Tto_KEY]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DIVIPO]"
+                          cachedDataType="r8"
+                          cachedName="DIVIPO"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DIVIPO]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DIVIPO]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ORGANISMO DE TRÁNSITO]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ORGANISMO DE TRÁNSITO"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORGANISMO DE TRÁNSITO]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORGANISMO DE TRÁNSITO]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JURISDICCIÓN]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="JURISDICCIÓN"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JURISDICCIÓN]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JURISDICCIÓN]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CATEGORÍA]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="CATEGORÍA"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORÍA]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CATEGORÍA]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CIUDAD]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="CIUDAD"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CIUDAD]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CIUDAD]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DEPARTAMENTO]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="DEPARTAMENTO"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTAMENTO]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ABREVIATURA]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ABREVIATURA"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ABREVIATURA]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABREVIATURA]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ESTADO]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ESTADO"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ESTADO]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ESTADO]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="zz_CÓDIGOS_Direcciones_Territoriale"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zz_CÓDIGOS_Direcciones_Territoriale]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[zz_Origen_REG]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="zz_Origen_REG"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zz_Origen_REG]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_Origen_REG]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SAP_CodRegion]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SAP_CodRegion"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_CodRegion]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodRegion]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SAP_CodPoblacion]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SAP_CodPoblacion"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_CodPoblacion]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodPoblacion]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SAP_DesRegion]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SAP_DesRegion"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_DesRegion]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesRegion]" />
+                        <inputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SAP_DesPoblacion]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="SAP_DesPoblacion"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_DesPoblacion]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesPoblacion]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Organismos_Tto_KEY]"
+                          dataType="i4"
+                          name="Organismos_Tto_KEY" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DIVIPO]"
+                          dataType="r8"
+                          name="DIVIPO" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORGANISMO DE TRÁNSITO]"
+                          dataType="wstr"
+                          length="255"
+                          name="ORGANISMO DE TRÁNSITO" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JURISDICCIÓN]"
+                          dataType="wstr"
+                          length="255"
+                          name="JURISDICCIÓN" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORÍA]"
+                          dataType="wstr"
+                          length="255"
+                          name="CATEGORÍA" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CIUDAD]"
+                          dataType="wstr"
+                          length="255"
+                          name="CIUDAD" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTAMENTO]"
+                          dataType="wstr"
+                          length="255"
+                          name="DEPARTAMENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ABREVIATURA]"
+                          dataType="wstr"
+                          length="255"
+                          name="ABREVIATURA" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ESTADO]"
+                          dataType="wstr"
+                          length="255"
+                          name="ESTADO" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zz_CÓDIGOS_Direcciones_Territoriale]"
+                          dataType="wstr"
+                          length="255"
+                          name="zz_CÓDIGOS_Direcciones_Territoriale" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zz_Origen_REG]"
+                          dataType="wstr"
+                          length="255"
+                          name="zz_Origen_REG" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_CodRegion]"
+                          dataType="wstr"
+                          length="255"
+                          name="SAP_CodRegion" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_CodPoblacion]"
+                          dataType="wstr"
+                          length="255"
+                          name="SAP_CodPoblacion" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_DesRegion]"
+                          dataType="wstr"
+                          length="255"
+                          name="SAP_DesRegion" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_DesPoblacion]"
+                          dataType="wstr"
+                          length="255"
+                          name="SAP_DesPoblacion" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[Homo].[TTO_OC_SAP_HOMO_RUNT_]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="{624C7A27-72BE-41BF-A647-BB96C78B1D59}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_B_Stage]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Organismos_Tto_KEY]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Organismos_Tto_KEY]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Organismos_Tto_KEY]"
+                          name="Organismos_Tto_KEY"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DIVIPO]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DIVIPO]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DIVIPO]"
+                          name="DIVIPO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORGANISMO DE TRÁNSITO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORGANISMO DE TRÁNSITO]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORGANISMO DE TRÁNSITO]"
+                          name="ORGANISMO DE TRÁNSITO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JURISDICCIÓN]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JURISDICCIÓN]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JURISDICCIÓN]"
+                          name="JURISDICCIÓN"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CATEGORÍA]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CATEGORÍA]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CATEGORÍA]"
+                          name="CATEGORÍA"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CIUDAD]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CIUDAD]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CIUDAD]"
+                          name="CIUDAD"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DEPARTAMENTO]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]"
+                          name="DEPARTAMENTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABREVIATURA]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ABREVIATURA]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABREVIATURA]"
+                          name="ABREVIATURA"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ESTADO]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ESTADO]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ESTADO]"
+                          name="ESTADO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zz_CÓDIGOS_Direcciones_Territoriale]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
+                          name="zz_CÓDIGOS_Direcciones_Territoriale"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_Origen_REG]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zz_Origen_REG]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_Origen_REG]"
+                          name="zz_Origen_REG"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodRegion]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_CodRegion]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodRegion]"
+                          name="SAP_CodRegion"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodPoblacion]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_CodPoblacion]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodPoblacion]"
+                          name="SAP_CodPoblacion"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesRegion]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_DesRegion]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesRegion]"
+                          name="SAP_DesRegion"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesPoblacion]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_DesPoblacion]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesPoblacion]"
+                          name="SAP_DesPoblacion"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Organismos_Tto_KEY]"
+                          dataType="i4"
+                          name="Organismos_Tto_KEY" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DIVIPO]"
+                          dataType="r8"
+                          name="DIVIPO" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORGANISMO DE TRÁNSITO]"
+                          dataType="wstr"
+                          length="255"
+                          name="ORGANISMO DE TRÁNSITO" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JURISDICCIÓN]"
+                          dataType="wstr"
+                          length="255"
+                          name="JURISDICCIÓN" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CATEGORÍA]"
+                          dataType="wstr"
+                          length="255"
+                          name="CATEGORÍA" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CIUDAD]"
+                          dataType="wstr"
+                          length="255"
+                          name="CIUDAD" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DEPARTAMENTO]"
+                          dataType="wstr"
+                          length="255"
+                          name="DEPARTAMENTO" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ABREVIATURA]"
+                          dataType="wstr"
+                          length="255"
+                          name="ABREVIATURA" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ESTADO]"
+                          dataType="wstr"
+                          length="255"
+                          name="ESTADO" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zz_CÓDIGOS_Direcciones_Territoriale]"
+                          dataType="wstr"
+                          length="255"
+                          name="zz_CÓDIGOS_Direcciones_Territoriale" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zz_Origen_REG]"
+                          dataType="wstr"
+                          length="255"
+                          name="zz_Origen_REG" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_CodRegion]"
+                          dataType="wstr"
+                          length="255"
+                          name="SAP_CodRegion" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_CodPoblacion]"
+                          dataType="wstr"
+                          length="255"
+                          name="SAP_CodPoblacion" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_DesRegion]"
+                          dataType="wstr"
+                          length="255"
+                          name="SAP_DesRegion" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_DesPoblacion]"
+                          dataType="wstr"
+                          length="255"
+                          name="SAP_DesPoblacion" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Organismos_Tto_KEY]"
+                          dataType="i4"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Organismos_Tto_KEY]"
+                          name="Organismos_Tto_KEY" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DIVIPO]"
+                          dataType="r8"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DIVIPO]"
+                          name="DIVIPO" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORGANISMO DE TRÁNSITO]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORGANISMO DE TRÁNSITO]"
+                          name="ORGANISMO DE TRÁNSITO" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JURISDICCIÓN]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JURISDICCIÓN]"
+                          name="JURISDICCIÓN" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CATEGORÍA]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CATEGORÍA]"
+                          name="CATEGORÍA" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CIUDAD]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CIUDAD]"
+                          name="CIUDAD" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DEPARTAMENTO]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DEPARTAMENTO]"
+                          name="DEPARTAMENTO" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ABREVIATURA]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ABREVIATURA]"
+                          name="ABREVIATURA" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ESTADO]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ESTADO]"
+                          name="ESTADO" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
+                          name="zz_CÓDIGOS_Direcciones_Territoriale" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zz_Origen_REG]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zz_Origen_REG]"
+                          name="zz_Origen_REG" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_CodRegion]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_CodRegion]"
+                          name="SAP_CodRegion" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_CodPoblacion]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_CodPoblacion]"
+                          name="SAP_CodPoblacion" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_DesRegion]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_DesRegion]"
+                          name="SAP_DesRegion" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_DesPoblacion]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_DesPoblacion]"
+                          name="SAP_DesPoblacion" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task.Paths[OLE DB Source Output]"
+                  endId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Truncate HOmologaciones"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Tarea Ejecutar SQL"
+          DTS:DTSID="{B049E3E0-580B-4BAB-98BE-A7DD9CA4A209}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate HOmologaciones"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{78B6707A-0153-4925-AFC6-28F743F7F82E}"
+              SQLTask:SqlStatementSource="truncate table tmp.TTO_OC_SAP_HOMO_RUNT_" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{3D117F01-B530-46C5-8EB8-37EBEC0C9700}"
+          DTS:From="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Truncate HOmologaciones"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Sequence Container"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{40B9612F-2F78-40D8-8B96-4AE95B58CEE4}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Sequence Container">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Sequence Container\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{125BF944-B0D5-4036-9C1E-5FD976AC8DA3}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[Tmp].[Rangos_Unificados]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[IDRango]"
+                          cachedDataType="i4"
+                          cachedName="IDRango"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDRango]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[IDRango]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Departamento]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Departamento"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Departamento]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Departamento]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ciudad]"
+                          cachedDataType="wstr"
+                          cachedLength="50"
+                          cachedName="Ciudad"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ciudad]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ciudad]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[tto]"
+                          cachedDataType="i4"
+                          cachedName="tto"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tto]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[tto]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mascara]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Mascara"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mascara]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mascara]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sufijo]"
+                          cachedDataType="wstr"
+                          cachedLength="1"
+                          cachedName="Sufijo"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sufijo]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sufijo]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[servicio]"
+                          cachedDataType="i4"
+                          cachedName="servicio"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[servicio]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[servicio]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[dato]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="dato"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dato]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[dato]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PlacaInicia]"
+                          cachedDataType="wstr"
+                          cachedLength="8"
+                          cachedName="PlacaInicia"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlacaInicia]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PlacaInicia]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PlacaTermina]"
+                          cachedDataType="wstr"
+                          cachedLength="8"
+                          cachedName="PlacaTermina"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlacaTermina]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PlacaTermina]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RN_Inicio]"
+                          cachedDataType="i4"
+                          cachedName="RN_Inicio"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RN_Inicio]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RN_Inicio]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RN_Termina]"
+                          cachedDataType="i4"
+                          cachedName="RN_Termina"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RN_Termina]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RN_Termina]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AMPLITUD]"
+                          cachedDataType="i4"
+                          cachedName="AMPLITUD"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AMPLITUD]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AMPLITUD]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[FECHA_APROBACION]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="FECHA_APROBACION"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FECHA_APROBACION]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FECHA_APROBACION]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ResolucionAprobacion]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ResolucionAprobacion"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ResolucionAprobacion]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ResolucionAprobacion]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Mixto]"
+                          cachedDataType="bool"
+                          cachedName="Mixto"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mixto]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mixto]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MixtoCon]"
+                          cachedDataType="i2"
+                          cachedName="MixtoCon"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MixtoCon]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MixtoCon]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MixtoConNOmbre]"
+                          cachedDataType="wstr"
+                          cachedLength="20"
+                          cachedName="MixtoConNOmbre"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MixtoConNOmbre]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MixtoConNOmbre]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PromedioDeMODELO]"
+                          cachedDataType="r8"
+                          cachedName="PromedioDeMODELO"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromedioDeMODELO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromedioDeMODELO]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OBSERVACION]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="OBSERVACION"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OBSERVACION]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OBSERVACION]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[o]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="o"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[o]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[o]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NO_USAR]"
+                          cachedDataType="bool"
+                          cachedName="NO_USAR"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NO_USAR]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NO_USAR]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cant_TTO]"
+                          cachedDataType="i4"
+                          cachedName="Cant_TTO"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cant_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cant_TTO]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Porc_Ocup_TTO]"
+                          cachedDataType="r8"
+                          cachedName="Porc_Ocup_TTO"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Porc_Ocup_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Porc_Ocup_TTO]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PromMod_Excel]"
+                          cachedDataType="r8"
+                          cachedName="PromMod_Excel"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromMod_Excel]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromMod_Excel]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PromMod_TTO]"
+                          cachedDataType="r8"
+                          cachedName="PromMod_TTO"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromMod_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromMod_TTO]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinModelo_TTO]"
+                          cachedDataType="r8"
+                          cachedName="MinModelo_TTO"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinModelo_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MinModelo_TTO]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxModelo_TTO]"
+                          cachedDataType="r8"
+                          cachedName="MaxModelo_TTO"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxModelo_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaxModelo_TTO]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cant_Excel]"
+                          cachedDataType="i4"
+                          cachedName="Cant_Excel"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cant_Excel]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cant_Excel]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Varianza_Mod_TTO]"
+                          cachedDataType="r8"
+                          cachedName="Varianza_Mod_TTO"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Varianza_Mod_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Varianza_Mod_TTO]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Cant_SAP]"
+                          cachedDataType="i4"
+                          cachedName="Cant_SAP"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cant_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cant_SAP]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Porc_Ocup_SAP]"
+                          cachedDataType="r8"
+                          cachedName="Porc_Ocup_SAP"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Porc_Ocup_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Porc_Ocup_SAP]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PromMod_SAP]"
+                          cachedDataType="r8"
+                          cachedName="PromMod_SAP"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromMod_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromMod_SAP]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MinModelo_SAP]"
+                          cachedDataType="r8"
+                          cachedName="MinModelo_SAP"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinModelo_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MinModelo_SAP]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MaxModelo_SAP]"
+                          cachedDataType="r8"
+                          cachedName="MaxModelo_SAP"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxModelo_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaxModelo_SAP]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Varianza_Mod_SAP]"
+                          cachedDataType="r8"
+                          cachedName="Varianza_Mod_SAP"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Varianza_Mod_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Varianza_Mod_SAP]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OrigenMinisterioIdentico]"
+                          cachedDataType="bool"
+                          cachedName="OrigenMinisterioIdentico"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrigenMinisterioIdentico]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrigenMinisterioIdentico]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Indirecto_Por_radicaciones]"
+                          cachedDataType="bool"
+                          cachedName="Indirecto_Por_radicaciones"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Indirecto_Por_radicaciones]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Indirecto_Por_radicaciones]" />
+                        <inputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Indirecto_Por_OC_SAP_julio_2015]"
+                          cachedDataType="bool"
+                          cachedName="Indirecto_Por_OC_SAP_julio_2015"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Indirecto_Por_OC_SAP_julio_2015]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Indirecto_Por_OC_SAP_julio_2015]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IDRango]"
+                          dataType="i4"
+                          name="IDRango" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Departamento]"
+                          dataType="wstr"
+                          length="50"
+                          name="Departamento" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ciudad]"
+                          dataType="wstr"
+                          length="50"
+                          name="Ciudad" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tto]"
+                          dataType="i4"
+                          name="tto" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mascara]"
+                          dataType="wstr"
+                          length="10"
+                          name="Mascara" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sufijo]"
+                          dataType="wstr"
+                          length="1"
+                          name="Sufijo" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[servicio]"
+                          dataType="i4"
+                          name="servicio" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[dato]"
+                          dataType="wstr"
+                          length="255"
+                          name="dato" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlacaInicia]"
+                          dataType="wstr"
+                          length="8"
+                          name="PlacaInicia" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PlacaTermina]"
+                          dataType="wstr"
+                          length="8"
+                          name="PlacaTermina" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RN_Inicio]"
+                          dataType="i4"
+                          name="RN_Inicio" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RN_Termina]"
+                          dataType="i4"
+                          name="RN_Termina" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AMPLITUD]"
+                          dataType="i4"
+                          name="AMPLITUD" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[FECHA_APROBACION]"
+                          dataType="dbTimeStamp"
+                          name="FECHA_APROBACION" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ResolucionAprobacion]"
+                          dataType="wstr"
+                          length="255"
+                          name="ResolucionAprobacion" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mixto]"
+                          dataType="bool"
+                          name="Mixto" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MixtoCon]"
+                          dataType="i2"
+                          name="MixtoCon" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MixtoConNOmbre]"
+                          dataType="wstr"
+                          length="20"
+                          name="MixtoConNOmbre" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromedioDeMODELO]"
+                          dataType="r8"
+                          name="PromedioDeMODELO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OBSERVACION]"
+                          dataType="wstr"
+                          length="255"
+                          name="OBSERVACION" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[o]"
+                          dataType="wstr"
+                          length="255"
+                          name="o" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NO_USAR]"
+                          dataType="bool"
+                          name="NO_USAR" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cant_TTO]"
+                          dataType="i4"
+                          name="Cant_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Porc_Ocup_TTO]"
+                          dataType="r8"
+                          name="Porc_Ocup_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromMod_Excel]"
+                          dataType="r8"
+                          name="PromMod_Excel" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromMod_TTO]"
+                          dataType="r8"
+                          name="PromMod_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinModelo_TTO]"
+                          dataType="r8"
+                          name="MinModelo_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxModelo_TTO]"
+                          dataType="r8"
+                          name="MaxModelo_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cant_Excel]"
+                          dataType="i4"
+                          name="Cant_Excel" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Varianza_Mod_TTO]"
+                          dataType="r8"
+                          name="Varianza_Mod_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cant_SAP]"
+                          dataType="i4"
+                          name="Cant_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Porc_Ocup_SAP]"
+                          dataType="r8"
+                          name="Porc_Ocup_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PromMod_SAP]"
+                          dataType="r8"
+                          name="PromMod_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MinModelo_SAP]"
+                          dataType="r8"
+                          name="MinModelo_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MaxModelo_SAP]"
+                          dataType="r8"
+                          name="MaxModelo_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Varianza_Mod_SAP]"
+                          dataType="r8"
+                          name="Varianza_Mod_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OrigenMinisterioIdentico]"
+                          dataType="bool"
+                          name="OrigenMinisterioIdentico" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Indirecto_Por_radicaciones]"
+                          dataType="bool"
+                          name="Indirecto_Por_radicaciones" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Indirecto_Por_OC_SAP_julio_2015]"
+                          dataType="bool"
+                          name="Indirecto_Por_OC_SAP_julio_2015" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Sequence Container\Data Flow Task\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[RANGOS_UNIFICADOS]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="{152E618E-AE93-4714-AEED-C58942417FB9}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_A_Maestro]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[IDRango]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IDRango]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[IDRango]"
+                          name="IDRango"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Departamento]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Departamento]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Departamento]"
+                          name="Departamento"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ciudad]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Ciudad]"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Ciudad]"
+                          name="Ciudad"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[tto]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[tto]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[tto]"
+                          name="tto"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mascara]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mascara]"
+                          length="10"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mascara]"
+                          name="Mascara"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sufijo]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sufijo]"
+                          length="1"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sufijo]"
+                          name="Sufijo"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[servicio]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[servicio]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[servicio]"
+                          name="servicio"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[dato]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dato]"
+                          length="255"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[dato]"
+                          name="dato"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PlacaInicia]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PlacaInicia]"
+                          length="8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PlacaInicia]"
+                          name="PlacaInicia"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PlacaTermina]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PlacaTermina]"
+                          length="8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PlacaTermina]"
+                          name="PlacaTermina"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RN_Inicio]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RN_Inicio]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RN_Inicio]"
+                          name="RN_Inicio"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RN_Termina]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RN_Termina]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[RN_Termina]"
+                          name="RN_Termina"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AMPLITUD]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AMPLITUD]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AMPLITUD]"
+                          name="AMPLITUD"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FECHA_APROBACION]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FECHA_APROBACION]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[FECHA_APROBACION]"
+                          name="FECHA_APROBACION"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ResolucionAprobacion]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ResolucionAprobacion]"
+                          length="255"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ResolucionAprobacion]"
+                          name="ResolucionAprobacion"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mixto]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mixto]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mixto]"
+                          name="Mixto"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MixtoCon]"
+                          dataType="i2"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MixtoCon]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MixtoCon]"
+                          name="MixtoCon"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MixtoConNOmbre]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MixtoConNOmbre]"
+                          length="20"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MixtoConNOmbre]"
+                          name="MixtoConNOmbre"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromedioDeMODELO]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PromedioDeMODELO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromedioDeMODELO]"
+                          name="PromedioDeMODELO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OBSERVACION]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OBSERVACION]"
+                          length="255"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OBSERVACION]"
+                          name="OBSERVACION"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[o]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[o]"
+                          length="255"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[o]"
+                          name="o"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NO_USAR]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NO_USAR]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[NO_USAR]"
+                          name="NO_USAR"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cant_TTO]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cant_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cant_TTO]"
+                          name="Cant_TTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Porc_Ocup_TTO]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Porc_Ocup_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Porc_Ocup_TTO]"
+                          name="Porc_Ocup_TTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromMod_Excel]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PromMod_Excel]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromMod_Excel]"
+                          name="PromMod_Excel"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromMod_TTO]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PromMod_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromMod_TTO]"
+                          name="PromMod_TTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MinModelo_TTO]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MinModelo_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MinModelo_TTO]"
+                          name="MinModelo_TTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaxModelo_TTO]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaxModelo_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaxModelo_TTO]"
+                          name="MaxModelo_TTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cant_Excel]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cant_Excel]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cant_Excel]"
+                          name="Cant_Excel"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Varianza_Mod_TTO]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Varianza_Mod_TTO]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Varianza_Mod_TTO]"
+                          name="Varianza_Mod_TTO"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cant_SAP]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cant_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cant_SAP]"
+                          name="Cant_SAP"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Porc_Ocup_SAP]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Porc_Ocup_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Porc_Ocup_SAP]"
+                          name="Porc_Ocup_SAP"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromMod_SAP]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PromMod_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[PromMod_SAP]"
+                          name="PromMod_SAP"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MinModelo_SAP]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MinModelo_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MinModelo_SAP]"
+                          name="MinModelo_SAP"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaxModelo_SAP]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaxModelo_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[MaxModelo_SAP]"
+                          name="MaxModelo_SAP"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Varianza_Mod_SAP]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Varianza_Mod_SAP]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Varianza_Mod_SAP]"
+                          name="Varianza_Mod_SAP"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrigenMinisterioIdentico]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OrigenMinisterioIdentico]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[OrigenMinisterioIdentico]"
+                          name="OrigenMinisterioIdentico"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Indirecto_Por_radicaciones]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Indirecto_Por_radicaciones]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Indirecto_Por_radicaciones]"
+                          name="Indirecto_Por_radicaciones"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Indirecto_Por_OC_SAP_julio_2015]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Indirecto_Por_OC_SAP_julio_2015]"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Indirecto_Por_OC_SAP_julio_2015]"
+                          name="Indirecto_Por_OC_SAP_julio_2015"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IDRango]"
+                          dataType="i4"
+                          name="IDRango" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Departamento]"
+                          dataType="wstr"
+                          length="50"
+                          name="Departamento" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Ciudad]"
+                          dataType="wstr"
+                          length="50"
+                          name="Ciudad" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[tto]"
+                          dataType="i4"
+                          name="tto" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mascara]"
+                          dataType="wstr"
+                          length="10"
+                          name="Mascara" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sufijo]"
+                          dataType="wstr"
+                          length="1"
+                          name="Sufijo" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[servicio]"
+                          dataType="i4"
+                          name="servicio" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dato]"
+                          dataType="wstr"
+                          length="255"
+                          name="dato" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PlacaInicia]"
+                          dataType="wstr"
+                          length="8"
+                          name="PlacaInicia" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PlacaTermina]"
+                          dataType="wstr"
+                          length="8"
+                          name="PlacaTermina" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RN_Inicio]"
+                          dataType="i4"
+                          name="RN_Inicio" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[RN_Termina]"
+                          dataType="i4"
+                          name="RN_Termina" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AMPLITUD]"
+                          dataType="i4"
+                          name="AMPLITUD" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FECHA_APROBACION]"
+                          dataType="dbTimeStamp"
+                          name="FECHA_APROBACION" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ResolucionAprobacion]"
+                          dataType="wstr"
+                          length="255"
+                          name="ResolucionAprobacion" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mixto]"
+                          dataType="bool"
+                          name="Mixto" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MixtoCon]"
+                          dataType="i2"
+                          name="MixtoCon" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MixtoConNOmbre]"
+                          dataType="wstr"
+                          length="20"
+                          name="MixtoConNOmbre" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PromedioDeMODELO]"
+                          dataType="r8"
+                          name="PromedioDeMODELO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OBSERVACION]"
+                          dataType="wstr"
+                          length="255"
+                          name="OBSERVACION" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[o]"
+                          dataType="wstr"
+                          length="255"
+                          name="o" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NO_USAR]"
+                          dataType="bool"
+                          name="NO_USAR" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cant_TTO]"
+                          dataType="i4"
+                          name="Cant_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Porc_Ocup_TTO]"
+                          dataType="r8"
+                          name="Porc_Ocup_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PromMod_Excel]"
+                          dataType="r8"
+                          name="PromMod_Excel" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PromMod_TTO]"
+                          dataType="r8"
+                          name="PromMod_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MinModelo_TTO]"
+                          dataType="r8"
+                          name="MinModelo_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaxModelo_TTO]"
+                          dataType="r8"
+                          name="MaxModelo_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cant_Excel]"
+                          dataType="i4"
+                          name="Cant_Excel" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Varianza_Mod_TTO]"
+                          dataType="r8"
+                          name="Varianza_Mod_TTO" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cant_SAP]"
+                          dataType="i4"
+                          name="Cant_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Porc_Ocup_SAP]"
+                          dataType="r8"
+                          name="Porc_Ocup_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[PromMod_SAP]"
+                          dataType="r8"
+                          name="PromMod_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MinModelo_SAP]"
+                          dataType="r8"
+                          name="MinModelo_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[MaxModelo_SAP]"
+                          dataType="r8"
+                          name="MaxModelo_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Varianza_Mod_SAP]"
+                          dataType="r8"
+                          name="Varianza_Mod_SAP" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[OrigenMinisterioIdentico]"
+                          dataType="bool"
+                          name="OrigenMinisterioIdentico" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Indirecto_Por_radicaciones]"
+                          dataType="bool"
+                          name="Indirecto_Por_radicaciones" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Indirecto_Por_OC_SAP_julio_2015]"
+                          dataType="bool"
+                          name="Indirecto_Por_OC_SAP_julio_2015" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IDRango]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IDRango]"
+                          name="IDRango" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Departamento]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Departamento]"
+                          name="Departamento" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Ciudad]"
+                          dataType="wstr"
+                          length="50"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Ciudad]"
+                          name="Ciudad" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[tto]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[tto]"
+                          name="tto" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mascara]"
+                          dataType="wstr"
+                          length="10"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mascara]"
+                          name="Mascara" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sufijo]"
+                          dataType="wstr"
+                          length="1"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sufijo]"
+                          name="Sufijo" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[servicio]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[servicio]"
+                          name="servicio" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dato]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dato]"
+                          name="dato" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PlacaInicia]"
+                          dataType="wstr"
+                          length="8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PlacaInicia]"
+                          name="PlacaInicia" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PlacaTermina]"
+                          dataType="wstr"
+                          length="8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PlacaTermina]"
+                          name="PlacaTermina" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RN_Inicio]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RN_Inicio]"
+                          name="RN_Inicio" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RN_Termina]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[RN_Termina]"
+                          name="RN_Termina" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AMPLITUD]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AMPLITUD]"
+                          name="AMPLITUD" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FECHA_APROBACION]"
+                          dataType="dbTimeStamp"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FECHA_APROBACION]"
+                          name="FECHA_APROBACION" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ResolucionAprobacion]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ResolucionAprobacion]"
+                          name="ResolucionAprobacion" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mixto]"
+                          dataType="bool"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mixto]"
+                          name="Mixto" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MixtoCon]"
+                          dataType="i2"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MixtoCon]"
+                          name="MixtoCon" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MixtoConNOmbre]"
+                          dataType="wstr"
+                          length="20"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MixtoConNOmbre]"
+                          name="MixtoConNOmbre" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PromedioDeMODELO]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PromedioDeMODELO]"
+                          name="PromedioDeMODELO" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OBSERVACION]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OBSERVACION]"
+                          name="OBSERVACION" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[o]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[o]"
+                          name="o" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NO_USAR]"
+                          dataType="bool"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NO_USAR]"
+                          name="NO_USAR" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cant_TTO]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cant_TTO]"
+                          name="Cant_TTO" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Porc_Ocup_TTO]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Porc_Ocup_TTO]"
+                          name="Porc_Ocup_TTO" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PromMod_Excel]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PromMod_Excel]"
+                          name="PromMod_Excel" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PromMod_TTO]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PromMod_TTO]"
+                          name="PromMod_TTO" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MinModelo_TTO]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MinModelo_TTO]"
+                          name="MinModelo_TTO" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaxModelo_TTO]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaxModelo_TTO]"
+                          name="MaxModelo_TTO" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cant_Excel]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cant_Excel]"
+                          name="Cant_Excel" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Varianza_Mod_TTO]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Varianza_Mod_TTO]"
+                          name="Varianza_Mod_TTO" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cant_SAP]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cant_SAP]"
+                          name="Cant_SAP" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Porc_Ocup_SAP]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Porc_Ocup_SAP]"
+                          name="Porc_Ocup_SAP" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PromMod_SAP]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[PromMod_SAP]"
+                          name="PromMod_SAP" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MinModelo_SAP]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MinModelo_SAP]"
+                          name="MinModelo_SAP" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaxModelo_SAP]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[MaxModelo_SAP]"
+                          name="MaxModelo_SAP" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Varianza_Mod_SAP]"
+                          dataType="r8"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Varianza_Mod_SAP]"
+                          name="Varianza_Mod_SAP" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OrigenMinisterioIdentico]"
+                          dataType="bool"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[OrigenMinisterioIdentico]"
+                          name="OrigenMinisterioIdentico" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Indirecto_Por_radicaciones]"
+                          dataType="bool"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Indirecto_Por_radicaciones]"
+                          name="Indirecto_Por_radicaciones" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Indirecto_Por_OC_SAP_julio_2015]"
+                          dataType="bool"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Indirecto_Por_OC_SAP_julio_2015]"
+                          name="Indirecto_Por_OC_SAP_julio_2015" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Sequence Container\Data Flow Task.Paths[OLE DB Source Output]"
+                  endId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Sequence Container\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task"
+          TopLeft="123,106" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Truncate HOmologaciones"
+          TopLeft="115,17" />
+        <EdgeLayout
+          Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio.PrecedenceConstraints[Constraint]"
+          TopLeft="216.5,59">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-18,47"
+              Start="0,0"
+              End="-18,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="-4,23.5" />
+                  <mssgle:LineSegment
+                    End="-14,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14,23.5"
+                    Point2="-18,23.5"
+                    Point3="-18,27.5" />
+                  <mssgle:LineSegment
+                    End="-18,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="396,203"
+          Size="396,246"
+          Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio"
+          TopLeft="389,149" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Sequence Container\Data Flow Task"
+          TopLeft="141,70" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="395,180"
+          Size="395,223"
+          Id="Package\Sequence Container"
+          TopLeft="390,430" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source"
+          TopLeft="407,167" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination"
+          TopLeft="396,466" />
+        <EdgeLayout
+          Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="481.75,209">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,257"
+              Start="0,0"
+              End="0,249.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,249.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Sequence Container\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Sequence Container\Data Flow Task\OLE DB Source"
+          TopLeft="395,145" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Sequence Container\Data Flow Task\OLE DB Destination"
+          TopLeft="389,499" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="472.25,187">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,312"
+              Start="0,0"
+              End="0,304.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,304.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

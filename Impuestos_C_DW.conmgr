@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW"
+  DTS:DTSID="{78B6707A-0153-4925-AFC6-28F743F7F82E}"
+  DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectByProxy">@[$Project::DESKTOPIPD8IMB_UNOEE_2019Impuestos_C_DW_ConnectByProxy]</DTS:PropertyExpression>
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::DESKTOPIPD8IMB_UNOEE_2019Impuestos_C_DW_ConnectionString]</DTS:PropertyExpression>
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=mipc\UNOEE_2019;Initial Catalog=Impuestos_C_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
