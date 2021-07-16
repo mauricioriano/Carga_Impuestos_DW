@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-IPD8IMB"
   DTS:CreatorName="DESKTOP-IPD8IMB\USUARIO"
-  DTS:DTSID="{8BE78543-4153-44F8-ACA4-E46E117FF91A}"
+  DTS:DTSID="{9E98CE1D-1BB7-478D-AE06-3B8EBE1C60EA}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LastModifiedProductVersion="15.0.2000.167"
   DTS:LocaleID="9226"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="H_Carga_Vigencias  PENDEINTE NO USAR"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{137B4454-A870-4B26-9644-37B29656B548}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{5E52FFDB-A849-4BB3-AA17-DFCEC11C2FEE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -47,7 +47,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Tmp].[Maestro_Vigencias]</property>
+                  name="OpenRowset">[Tmp].[Dim_Vigencias]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -90,8 +90,8 @@
               <connections>
                 <connection
                   refId="Package\Carga Maestro Vigencias\tmp Vigencias  DW.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -248,6 +248,14 @@
                       refId="Package\Carga Maestro Vigencias\tmp Vigencias  DW.Inputs[OLE DB Destination Input].ExternalColumns[MIN_PISO_2_HASTA]"
                       dataType="i4"
                       name="MIN_PISO_2_HASTA" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Maestro Vigencias\tmp Vigencias  DW.Inputs[OLE DB Destination Input].ExternalColumns[Vigencia_Key]"
+                      dataType="ui1"
+                      name="Vigencia_Key" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Maestro Vigencias\tmp Vigencias  DW.Inputs[OLE DB Destination Input].ExternalColumns[Cant_Placas_Causaron_Impuesto]"
+                      dataType="i4"
+                      name="Cant_Placas_Causaron_Impuesto" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -327,8 +335,8 @@
               <connections>
                 <connection
                   refId="Package\Carga Maestro Vigencias\VIigencias en Maestro.Connections[OleDbConnection]"
-                  connectionManagerID="{152E618E-AE93-4714-AEED-C58942417FB9}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_A_Maestro]"
+                  connectionManagerID="{747C0C75-241A-4A11-9315-E0007C9D00F3}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_A_Maestro]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -658,23 +666,23 @@
       DTS:To="Package\Carga Maestro Vigencias" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="194,42"
+          Size="193.6,41.6"
           Id="Package\Carga Maestro Vigencias"
           TopLeft="404,351" />
         <NodeLayout
-          Size="192,42"
+          Size="192,41.6"
           Id="Package\Truncate Tmp Vigencias"
           TopLeft="412,190" />
         <EdgeLayout
@@ -708,11 +716,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="183,42"
+          Size="183.2,41.6"
           Id="Package\Carga Maestro Vigencias\VIigencias en Maestro"
           TopLeft="402,168" />
         <NodeLayout
-          Size="168,42"
+          Size="168,41.6"
           Id="Package\Carga Maestro Vigencias\tmp Vigencias  DW"
           TopLeft="411,500" />
         <EdgeLayout
@@ -741,7 +749,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga Maestro Vigencias\VIigencias en Maestro">
+    design-time-name="Package\Carga Maestro Vigencias\tmp Vigencias  DW">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -754,7 +762,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga Maestro Vigencias\tmp Vigencias  DW">
+    design-time-name="Package\Carga Maestro Vigencias\VIigencias en Maestro">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

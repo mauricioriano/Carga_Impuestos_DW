@@ -11,8 +11,8 @@
   DTS:LocaleID="9226"
   DTS:ObjectName="C_Carga_Novedades"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{EDEBF14F-96ED-419E-BDC6-961139CE8581}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{A5509634-58CA-4126-B74D-08FD6FA82A36}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -90,8 +90,8 @@
               <connections>
                 <connection
                   refId="Package\Carga Novedades\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -287,7 +287,7 @@ FROM            SAP.Novedades</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">2</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
@@ -296,8 +296,8 @@ FROM            SAP.Novedades</property>
               <connections>
                 <connection
                   refId="Package\Carga Novedades\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{624C7A27-72BE-41BF-A647-BB96C78B1D59}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_B_Stage]"
+                  connectionManagerID="{D267B2C0-3F7B-47CD-A572-7F1E694A5267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_B_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -401,6 +401,194 @@ FROM            SAP.Novedades</property>
                       lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mod]"
                       name="Mod"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Número_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Número_ID]"
+                      length="50"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Número_ID]"
+                      name="Número_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre_de_pila]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre_de_pila]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre_de_pila]"
+                      name="Nombre_de_pila"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Apellidos]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Apellidos]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Apellidos]"
+                      name="Apellidos"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vlr_Nuevo]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Vlr_Nuevo]"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vlr_Nuevo]"
+                      name="Vlr_Nuevo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mot_Canc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mot_Canc]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mot_Canc]"
+                      name="Mot_Canc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Moneda]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Moneda]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Moneda]"
+                      name="Moneda"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Val_A_o_L]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Val_A_o_L]"
+                      length="50"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Val_A_o_L]"
+                      name="Val_A_o_L"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cod_Carroc]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cod_Carroc]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cod_Carroc]"
+                      name="Cod_Carroc"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cód_Capaci]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cód_Capaci]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cód_Capaci]"
+                      name="Cód_Capaci"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cód_Cilind]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cód_Cilind]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Cód_Cilind]"
+                      name="Cód_Cilind"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Por]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Por]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Por]"
+                      name="Por"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mod_]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mod_]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mod_]"
+                      name="Mod_"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Por1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Por1]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Por1]"
+                      name="Por1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Borrado]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Borrado]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Borrado]"
+                      name="Borrado"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Usu_Borro]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Usu_Borro]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Usu_Borro]"
+                      name="Usu_Borro"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Fecha_Borr]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Fecha_Borr]"
+                      length="50"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Fecha_Borr]"
+                      name="Fecha_Borr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Hora]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Hora]"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Hora]"
+                      name="Hora"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[ArchivoOrigen]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ArchivoOrigen]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[ArchivoOrigen]"
+                      name="ArchivoOrigen"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mot_CAncelacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mot_CAncelacion]"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].Columns[Mot_CAncelacion]"
+                      name="Mot_CAncelacion"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -449,6 +637,99 @@ FROM            SAP.Novedades</property>
                       refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mod]"
                       dataType="dbTimeStamp"
                       name="Mod" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Número_ID]"
+                      dataType="wstr"
+                      length="50"
+                      name="Número_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre_de_pila]"
+                      dataType="wstr"
+                      length="255"
+                      name="Nombre_de_pila" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Apellidos]"
+                      dataType="wstr"
+                      length="255"
+                      name="Apellidos" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Vlr_Nuevo]"
+                      dataType="r8"
+                      name="Vlr_Nuevo" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mot_Canc]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mot_Canc" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Moneda]"
+                      dataType="wstr"
+                      length="255"
+                      name="Moneda" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Val_A_o_L]"
+                      dataType="wstr"
+                      length="50"
+                      name="Val_A_o_L" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cod_Carroc]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cod_Carroc" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cód_Capaci]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cód_Capaci" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Cód_Cilind]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cód_Cilind" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Por]"
+                      dataType="wstr"
+                      length="255"
+                      name="Por" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mod_]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mod_" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Por1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Por1" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Borrado]"
+                      dataType="wstr"
+                      length="255"
+                      name="Borrado" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Usu_Borro]"
+                      dataType="wstr"
+                      length="255"
+                      name="Usu_Borro" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Fecha_Borr]"
+                      dataType="wstr"
+                      length="50"
+                      name="Fecha_Borr" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Hora]"
+                      dataType="dbTimeStamp"
+                      name="Hora" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ArchivoOrigen]"
+                      dataType="wstr"
+                      length="255"
+                      name="ArchivoOrigen" />
+                    <externalMetadataColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Mot_CAncelacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="Mot_CAncelacion" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -474,6 +755,29 @@ FROM            SAP.Novedades</property>
                       lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Int_cial]"
                       name="Int_cial" />
                     <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Número_ID]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Número_ID]"
+                      name="Número_ID" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre_de_pila]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre_de_pila]"
+                      name="Nombre_de_pila" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Apellidos]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Apellidos]"
+                      name="Apellidos" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Vlr_Nuevo]"
+                      dataType="r8"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Vlr_Nuevo]"
+                      name="Vlr_Nuevo" />
+                    <outputColumn
                       refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[D_Tip_Nov]"
                       dataType="wstr"
                       length="255"
@@ -484,6 +788,24 @@ FROM            SAP.Novedades</property>
                       dataType="dbTimeStamp"
                       lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Fecha_Acto]"
                       name="Fecha_Acto" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mot_Canc]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mot_Canc]"
+                      name="Mot_Canc" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Moneda]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Moneda]"
+                      name="Moneda" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Val_A_o_L]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Val_A_o_L]"
+                      name="Val_A_o_L" />
                     <outputColumn
                       refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Válido_de]"
                       dataType="dbTimeStamp"
@@ -507,10 +829,81 @@ FROM            SAP.Novedades</property>
                       lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No_pobl]"
                       name="No_pobl" />
                     <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cod_Carroc]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cod_Carroc]"
+                      name="Cod_Carroc" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cód_Capaci]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cód_Capaci]"
+                      name="Cód_Capaci" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cód_Cilind]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Cód_Cilind]"
+                      name="Cód_Cilind" />
+                    <outputColumn
                       refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mod]"
                       dataType="dbTimeStamp"
                       lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mod]"
                       name="Mod" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Por]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Por]"
+                      name="Por" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mod_]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mod_]"
+                      name="Mod_" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Por1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Por1]"
+                      name="Por1" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Borrado]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Borrado]"
+                      name="Borrado" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Usu_Borro]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Usu_Borro]"
+                      name="Usu_Borro" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Fecha_Borr]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Fecha_Borr]"
+                      name="Fecha_Borr" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Hora]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Hora]"
+                      name="Hora" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ArchivoOrigen]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ArchivoOrigen]"
+                      name="ArchivoOrigen" />
+                    <outputColumn
+                      refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mot_CAncelacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Mot_CAncelacion]"
+                      name="Mot_CAncelacion" />
                     <outputColumn
                       refId="Package\Carga Novedades\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -612,8 +1005,8 @@ FROM            SAP.Novedades</property>
               <connections>
                 <connection
                   refId="Package\Mueve  Condonaciones Normalizadas  a Novedades Procesadas\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -732,6 +1125,10 @@ FROM            SAP.Novedades</property>
                       refId="Package\Mueve  Condonaciones Normalizadas  a Novedades Procesadas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mod]"
                       dataType="dbTimeStamp"
                       name="Mod" />
+                    <externalMetadataColumn
+                      refId="Package\Mueve  Condonaciones Normalizadas  a Novedades Procesadas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdRow]"
+                      dataType="i4"
+                      name="IdRow" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -812,8 +1209,8 @@ FROM     Tmp.SAP_Condonaciones_Normalizadas</property>
               <connections>
                 <connection
                   refId="Package\Mueve  Condonaciones Normalizadas  a Novedades Procesadas\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1086,8 +1483,8 @@ FROM     Tmp.SAP_Condonaciones_Normalizadas</property>
               <connections>
                 <connection
                   refId="Package\Mueve  Prescripciones Normalizadas  a Novedades Procesadas\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1206,6 +1603,10 @@ FROM     Tmp.SAP_Condonaciones_Normalizadas</property>
                       refId="Package\Mueve  Prescripciones Normalizadas  a Novedades Procesadas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Fecha_Acto_Date]"
                       dataType="dbDate"
                       name="Fecha_Acto_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Mueve  Prescripciones Normalizadas  a Novedades Procesadas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdRow]"
+                      dataType="i4"
+                      name="IdRow" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1286,8 +1687,8 @@ FROM     Tmp.SAP_Prescripciones_Normalizadas</property>
               <connections>
                 <connection
                   refId="Package\Mueve  Prescripciones Normalizadas  a Novedades Procesadas\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1560,8 +1961,8 @@ FROM     Tmp.SAP_Prescripciones_Normalizadas</property>
               <connections>
                 <connection
                   refId="Package\Mueve Novedades   SIN CONDONACIONES  ni pPRESCRIPCIONES    a Novedades Procesadas\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1694,6 +2095,10 @@ FROM     Tmp.SAP_Prescripciones_Normalizadas</property>
                       refId="Package\Mueve Novedades   SIN CONDONACIONES  ni pPRESCRIPCIONES    a Novedades Procesadas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Mod]"
                       dataType="dbTimeStamp"
                       name="Mod" />
+                    <externalMetadataColumn
+                      refId="Package\Mueve Novedades   SIN CONDONACIONES  ni pPRESCRIPCIONES    a Novedades Procesadas\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdRow]"
+                      dataType="i4"
+                      name="IdRow" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1781,8 +2186,8 @@ and
               <connections>
                 <connection
                   refId="Package\Mueve Novedades   SIN CONDONACIONES  ni pPRESCRIPCIONES    a Novedades Procesadas\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2094,8 +2499,8 @@ WHERE        (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Vál
               <connections>
                 <connection
                   refId="Package\Normaliza COndonaciones Paso  0\Normaliza Condonaciones.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2403,8 +2808,8 @@ WHERE        (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Vál
               <connections>
                 <connection
                   refId="Package\Normaliza COndonaciones Paso  0\SAP Condonaciones NOrmalizadas.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2651,8 +3056,8 @@ WHERE        (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Vál
               <connections>
                 <connection
                   refId="Package\Normaliza las Prescripciones\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2871,8 +3276,8 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
               <connections>
                 <connection
                   refId="Package\Normaliza las Prescripciones\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3230,7 +3635,7 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
         <NodeLayout
           Size="239.2,41.6"
           Id="Package\Normaliza COndonaciones Paso  0"
-          TopLeft="506.499995927017,137.533332375951" />
+          TopLeft="526.499995132289,135.799999028842" />
         <NodeLayout
           Size="212.8,41.6"
           Id="Package\Normaliza las Prescripciones"
@@ -3263,18 +3668,18 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="436.466672958268,157.033332727221">
+          TopLeft="436.466672958268,156.166666053666">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70.0333229687485,0"
+              EndConnector="90.0333221740205,0"
               Start="0,0"
-              End="62.5333229687485,0">
+              End="82.5333221740205,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="62.5333229687485,0" />
+                    End="82.5333221740205,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3319,18 +3724,30 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Restricción]"
-          TopLeft="627.499987582366,179.133332375951">
+          TopLeft="646.099995132289,177.399999028842">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,24.0666690291295"
+              EndConnector="-17.2000158945725,25.8000023762376"
               Start="0,0"
-              End="0,16.5666690291295">
+              End="-17.2000158945725,18.3000023762376">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5666690291295" />
+                    End="0,8.90000118811882" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.90000118811882"
+                    Point2="0,12.9000011881188"
+                    Point3="-4,12.9000011881188" />
+                  <mssgle:LineSegment
+                    End="-13.2000158945725,12.9000011881188" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.2000158945725,12.9000011881188"
+                    Point2="-17.2000158945725,12.9000011881188"
+                    Point3="-17.2000158945725,16.9000011881188" />
+                  <mssgle:LineSegment
+                    End="-17.2000158945725,18.3000023762376" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3402,37 +3819,35 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
     design-time-name="Package\Carga Novedades">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Carga Novedades\OLE DB Source"
-          TopLeft="409,167" />
+          TopLeft="408.16666669978,167.866666673554" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\Carga Novedades\OLE DB Destination"
           TopLeft="400.16666669978,525" />
         <EdgeLayout
           Id="Package\Carga Novedades.Paths[OLE DB Source Output]"
-          TopLeft="484.98333334989,208.6">
+          TopLeft="484.56666669978,209.466666673554">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,316.4"
+              EndConnector="0,315.533333326446"
               Start="0,0"
-              End="0,308.9">
+              End="0,308.033333326446">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,308.9" />
+                    End="0,308.033333326446" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3470,13 +3885,13 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Mueve  Condonaciones Normalizadas  a Novedades Procesadas\OLE DB Destination"
-          TopLeft="462,381" />
-        <NodeLayout
           Size="150.4,41.6"
           Id="Package\Mueve  Condonaciones Normalizadas  a Novedades Procesadas\OLE DB Source"
           TopLeft="471,132" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Mueve  Condonaciones Normalizadas  a Novedades Procesadas\OLE DB Destination"
+          TopLeft="462,381" />
         <EdgeLayout
           Id="Package\Mueve  Condonaciones Normalizadas  a Novedades Procesadas.Paths[OLE DB Source Output]"
           TopLeft="546.75,174">
@@ -3598,13 +4013,13 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Mueve Novedades   SIN CONDONACIONES  ni pPRESCRIPCIONES    a Novedades Procesadas\OLE DB Destination"
-          TopLeft="443,387" />
-        <NodeLayout
           Size="150.4,41.6"
           Id="Package\Mueve Novedades   SIN CONDONACIONES  ni pPRESCRIPCIONES    a Novedades Procesadas\OLE DB Source"
           TopLeft="447,115" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Mueve Novedades   SIN CONDONACIONES  ni pPRESCRIPCIONES    a Novedades Procesadas\OLE DB Destination"
+          TopLeft="443,387" />
         <EdgeLayout
           Id="Package\Mueve Novedades   SIN CONDONACIONES  ni pPRESCRIPCIONES    a Novedades Procesadas.Paths[OLE DB Source Output]"
           TopLeft="525.4,156.6">
@@ -3655,7 +4070,7 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
     design-time-name="Package\Normaliza COndonaciones Paso  0">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="200,41.6"
           Id="Package\Normaliza COndonaciones Paso  0\Normaliza Condonaciones"
@@ -3695,9 +4110,7 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3733,7 +4146,7 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
     design-time-name="Package\Normaliza las Prescripciones">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="152,41.6"
           Id="Package\Normaliza las Prescripciones\OLE DB Source"
@@ -3773,9 +4186,7 @@ WHERE (Tmp.Maestro_Vigencias.Vigencia BETWEEN YEAR(Tmp.SAP_Novedades.Válido_de)
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -7,12 +7,12 @@
   DTS:CreatorName="DESKTOP-IPD8IMB\USUARIO"
   DTS:DTSID="{E29EA3EB-704E-4954-9C33-B737E68E34C8}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LastModifiedProductVersion="15.0.2000.167"
   DTS:LocaleID="9226"
   DTS:ObjectName="J__Carga_Homologaciones"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{EA38176E-D033-4D89-AEAD-0FFC8446ECFD}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{87DF1E27-C658-4CC1-8E3D-C2C7CE91D031}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -100,8 +100,8 @@
                   <connections>
                     <connection
                       refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                      connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:invalid"
+                      connectionManagerRefId="{78B6707A-0153-4925-AFC6-28F743F7F82E}:invalid"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -118,104 +118,104 @@
                           cachedDataType="i4"
                           cachedName="Organismos_Tto_KEY"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Organismos_Tto_KEY]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Organismos_Tto_KEY]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\61:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DIVIPO]"
                           cachedDataType="r8"
                           cachedName="DIVIPO"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DIVIPO]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DIVIPO]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\62:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ORGANISMO DE TRÁNSITO]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="ORGANISMO DE TRÁNSITO"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ORGANISMO DE TRÁNSITO]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORGANISMO DE TRÁNSITO]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\63:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[JURISDICCIÓN]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="JURISDICCIÓN"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[JURISDICCIÓN]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JURISDICCIÓN]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\64:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CATEGORÍA]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="CATEGORÍA"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CATEGORÍA]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CATEGORÍA]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\65:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CIUDAD]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="CIUDAD"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CIUDAD]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CIUDAD]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\66:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DEPARTAMENTO]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="DEPARTAMENTO"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTAMENTO]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\67:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ABREVIATURA]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="ABREVIATURA"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ABREVIATURA]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABREVIATURA]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\68:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ESTADO]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="ESTADO"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ESTADO]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ESTADO]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\69:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="zz_CÓDIGOS_Direcciones_Territoriale"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zz_CÓDIGOS_Direcciones_Territoriale]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\70:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[zz_Origen_REG]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="zz_Origen_REG"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[zz_Origen_REG]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_Origen_REG]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\71:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SAP_CodRegion]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="SAP_CodRegion"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_CodRegion]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodRegion]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\72:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SAP_CodPoblacion]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="SAP_CodPoblacion"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_CodPoblacion]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodPoblacion]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\73:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SAP_DesRegion]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="SAP_DesRegion"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_DesRegion]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesRegion]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\74:invalid" />
                         <inputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SAP_DesPoblacion]"
                           cachedDataType="wstr"
                           cachedLength="255"
                           cachedName="SAP_DesPoblacion"
                           externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SAP_DesPoblacion]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesPoblacion]" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\75:invalid" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -336,7 +336,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[Homo].[TTO_OC_SAP_HOMO_RUNT_]</property>
+                      name="OpenRowset">[Dane].[DIVIPOLA_CON_GEOREF]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -371,8 +371,8 @@
                   <connections>
                     <connection
                       refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{624C7A27-72BE-41BF-A647-BB96C78B1D59}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_B_Stage]"
+                      connectionManagerID="{747C0C75-241A-4A11-9315-E0007C9D00F3}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_A_Maestro]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -382,229 +382,184 @@
                       name="OLE DB Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Organismos_Tto_KEY]"
-                          dataType="i4"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Código departamento]"
+                          dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Organismos_Tto_KEY]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Organismos_Tto_KEY]"
-                          name="Organismos_Tto_KEY"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Código departamento]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Código departamento]"
+                          name="Código departamento"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DIVIPO]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Código municipio]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Código municipio]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Código municipio]"
+                          name="Código municipio"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Código centro poblado]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Código centro poblado]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Código centro poblado]"
+                          name="Código centro poblado"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre departamento]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre departamento]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre departamento]"
+                          name="Nombre departamento"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre municipio]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre municipio]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre municipio]"
+                          name="Nombre municipio"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre centro poblado]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre centro poblado]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nombre centro poblado]"
+                          name="Nombre centro poblado"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tipo centro poblado]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tipo centro poblado]"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tipo centro poblado]"
+                          name="Tipo centro poblado"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitud]"
                           dataType="r8"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DIVIPO]"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DIVIPO]"
-                          name="DIVIPO"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Longitud]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Longitud]"
+                          name="Longitud"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORGANISMO DE TRÁNSITO]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitud]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Latitud]"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Latitud]"
+                          name="Latitud"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Distrito]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORGANISMO DE TRÁNSITO]"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Distrito]"
                           length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ORGANISMO DE TRÁNSITO]"
-                          name="ORGANISMO DE TRÁNSITO"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Distrito]"
+                          name="Distrito"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JURISDICCIÓN]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tipo de municipio]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JURISDICCIÓN]"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tipo de municipio]"
                           length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[JURISDICCIÓN]"
-                          name="JURISDICCIÓN"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Tipo de municipio]"
+                          name="Tipo de municipio"
                           truncationRowDisposition="FailComponent" />
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CATEGORÍA]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Área metropolitana]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CATEGORÍA]"
+                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Área metropolitana]"
                           length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CATEGORÍA]"
-                          name="CATEGORÍA"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CIUDAD]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CIUDAD]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[CIUDAD]"
-                          name="CIUDAD"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DEPARTAMENTO]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[DEPARTAMENTO]"
-                          name="DEPARTAMENTO"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABREVIATURA]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ABREVIATURA]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ABREVIATURA]"
-                          name="ABREVIATURA"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ESTADO]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ESTADO]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ESTADO]"
-                          name="ESTADO"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zz_CÓDIGOS_Direcciones_Territoriale]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
-                          name="zz_CÓDIGOS_Direcciones_Territoriale"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_Origen_REG]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zz_Origen_REG]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_Origen_REG]"
-                          name="zz_Origen_REG"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodRegion]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_CodRegion]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodRegion]"
-                          name="SAP_CodRegion"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodPoblacion]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_CodPoblacion]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_CodPoblacion]"
-                          name="SAP_CodPoblacion"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesRegion]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_DesRegion]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesRegion]"
-                          name="SAP_DesRegion"
-                          truncationRowDisposition="FailComponent" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesPoblacion]"
-                          dataType="wstr"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_DesPoblacion]"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[SAP_DesPoblacion]"
-                          name="SAP_DesPoblacion"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Área metropolitana]"
+                          name="Área metropolitana"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Organismos_Tto_KEY]"
-                          dataType="i4"
-                          name="Organismos_Tto_KEY" />
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Código departamento]"
+                          dataType="wstr"
+                          length="255"
+                          name="Código departamento" />
                         <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DIVIPO]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Código municipio]"
+                          dataType="wstr"
+                          length="255"
+                          name="Código municipio" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Código centro poblado]"
+                          dataType="wstr"
+                          length="255"
+                          name="Código centro poblado" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre departamento]"
+                          dataType="wstr"
+                          length="255"
+                          name="Nombre departamento" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre municipio]"
+                          dataType="wstr"
+                          length="255"
+                          name="Nombre municipio" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nombre centro poblado]"
+                          dataType="wstr"
+                          length="255"
+                          name="Nombre centro poblado" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tipo centro poblado]"
+                          dataType="wstr"
+                          length="255"
+                          name="Tipo centro poblado" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Longitud]"
                           dataType="r8"
-                          name="DIVIPO" />
+                          name="Longitud" />
                         <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ORGANISMO DE TRÁNSITO]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Latitud]"
+                          dataType="r8"
+                          name="Latitud" />
+                        <externalMetadataColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Distrito]"
                           dataType="wstr"
                           length="255"
-                          name="ORGANISMO DE TRÁNSITO" />
+                          name="Distrito" />
                         <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[JURISDICCIÓN]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Tipo de municipio]"
                           dataType="wstr"
                           length="255"
-                          name="JURISDICCIÓN" />
+                          name="Tipo de municipio" />
                         <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CATEGORÍA]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Área metropolitana]"
                           dataType="wstr"
                           length="255"
-                          name="CATEGORÍA" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CIUDAD]"
-                          dataType="wstr"
-                          length="255"
-                          name="CIUDAD" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DEPARTAMENTO]"
-                          dataType="wstr"
-                          length="255"
-                          name="DEPARTAMENTO" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ABREVIATURA]"
-                          dataType="wstr"
-                          length="255"
-                          name="ABREVIATURA" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ESTADO]"
-                          dataType="wstr"
-                          length="255"
-                          name="ESTADO" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zz_CÓDIGOS_Direcciones_Territoriale]"
-                          dataType="wstr"
-                          length="255"
-                          name="zz_CÓDIGOS_Direcciones_Territoriale" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zz_Origen_REG]"
-                          dataType="wstr"
-                          length="255"
-                          name="zz_Origen_REG" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_CodRegion]"
-                          dataType="wstr"
-                          length="255"
-                          name="SAP_CodRegion" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_CodPoblacion]"
-                          dataType="wstr"
-                          length="255"
-                          name="SAP_CodPoblacion" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_DesRegion]"
-                          dataType="wstr"
-                          length="255"
-                          name="SAP_DesRegion" />
-                        <externalMetadataColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[SAP_DesPoblacion]"
-                          dataType="wstr"
-                          length="255"
-                          name="SAP_DesPoblacion" />
+                          name="Área metropolitana" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -613,93 +568,75 @@
                       name="OLE DB Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Organismos_Tto_KEY]"
-                          dataType="i4"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Organismos_Tto_KEY]"
-                          name="Organismos_Tto_KEY" />
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Código departamento]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Código departamento]"
+                          name="Código departamento" />
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DIVIPO]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Código municipio]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Código municipio]"
+                          name="Código municipio" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Código centro poblado]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Código centro poblado]"
+                          name="Código centro poblado" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre departamento]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre departamento]"
+                          name="Nombre departamento" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre municipio]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre municipio]"
+                          name="Nombre municipio" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre centro poblado]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nombre centro poblado]"
+                          name="Nombre centro poblado" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tipo centro poblado]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tipo centro poblado]"
+                          name="Tipo centro poblado" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Longitud]"
                           dataType="r8"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DIVIPO]"
-                          name="DIVIPO" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Longitud]"
+                          name="Longitud" />
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORGANISMO DE TRÁNSITO]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Latitud]"
+                          dataType="r8"
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Latitud]"
+                          name="Latitud" />
+                        <outputColumn
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Distrito]"
                           dataType="wstr"
                           length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ORGANISMO DE TRÁNSITO]"
-                          name="ORGANISMO DE TRÁNSITO" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Distrito]"
+                          name="Distrito" />
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JURISDICCIÓN]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tipo de municipio]"
                           dataType="wstr"
                           length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[JURISDICCIÓN]"
-                          name="JURISDICCIÓN" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Tipo de municipio]"
+                          name="Tipo de municipio" />
                         <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CATEGORÍA]"
+                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Área metropolitana]"
                           dataType="wstr"
                           length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CATEGORÍA]"
-                          name="CATEGORÍA" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CIUDAD]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CIUDAD]"
-                          name="CIUDAD" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DEPARTAMENTO]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DEPARTAMENTO]"
-                          name="DEPARTAMENTO" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ABREVIATURA]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ABREVIATURA]"
-                          name="ABREVIATURA" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ESTADO]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ESTADO]"
-                          name="ESTADO" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zz_CÓDIGOS_Direcciones_Territoriale]"
-                          name="zz_CÓDIGOS_Direcciones_Territoriale" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zz_Origen_REG]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[zz_Origen_REG]"
-                          name="zz_Origen_REG" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_CodRegion]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_CodRegion]"
-                          name="SAP_CodRegion" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_CodPoblacion]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_CodPoblacion]"
-                          name="SAP_CodPoblacion" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_DesRegion]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_DesRegion]"
-                          name="SAP_DesRegion" />
-                        <outputColumn
-                          refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_DesPoblacion]"
-                          dataType="wstr"
-                          length="255"
-                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[SAP_DesPoblacion]"
-                          name="SAP_DesPoblacion" />
+                          lineageId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Área metropolitana]"
+                          name="Área metropolitana" />
                         <outputColumn
                           refId="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
@@ -740,7 +677,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{78B6707A-0153-4925-AFC6-28F743F7F82E}"
+              SQLTask:Connection="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}"
               SQLTask:SqlStatementSource="truncate table tmp.TTO_OC_SAP_HOMO_RUNT_" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
@@ -839,8 +776,8 @@
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                      connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:invalid"
+                      connectionManagerRefId="{78B6707A-0153-4925-AFC6-28F743F7F82E}:invalid"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1346,8 +1283,8 @@
                   <connections>
                     <connection
                       refId="Package\Sequence Container\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                      connectionManagerID="{152E618E-AE93-4714-AEED-C58942417FB9}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_A_Maestro]"
+                      connectionManagerID="{152E618E-AE93-4714-AEED-C58942417FB9}:invalid"
+                      connectionManagerRefId="{152E618E-AE93-4714-AEED-C58942417FB9}:invalid"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2133,23 +2070,23 @@
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,42"
+          Size="151.2,41.6"
           Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task"
           TopLeft="123,106" />
         <NodeLayout
-          Size="203,42"
+          Size="203.2,41.6"
           Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Truncate HOmologaciones"
           TopLeft="115,17" />
         <EdgeLayout
@@ -2189,19 +2126,19 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="396,203"
-          Size="396,246"
+          PanelSize="396,203.2"
+          Size="396,246.4"
           Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio"
           TopLeft="389,149" />
         <NodeLayout
-          Size="151,42"
+          Size="151.2,41.6"
           Id="Package\Sequence Container\Data Flow Task"
           TopLeft="141,70" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="395,180"
-          Size="395,223"
+          PanelSize="395.2,180"
+          Size="395.2,223.2"
           Id="Package\Sequence Container"
           TopLeft="390,430" />
       </GraphLayout>
@@ -2211,15 +2148,15 @@
     design-time-name="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="150,42"
-          Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source"
-          TopLeft="407,167" />
-        <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination"
           TopLeft="396,466" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source"
+          TopLeft="407,167" />
         <EdgeLayout
           Id="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="481.75,209">
@@ -2239,14 +2176,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-8,116.75,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2259,7 +2198,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Carga Homologacion de Region Ciudad de OC con TRansitos de Ministerio\Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2310,7 +2249,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Sequence Container\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2323,7 +2262,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Sequence Container\Data Flow Task\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
