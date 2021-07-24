@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="D_Carga_Recaudo"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{67A243D6-48F7-4CAD-86D6-2C078D4FB4AC}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{945B131E-9C07-4CAC-BB1D-5F3EB1B47F20}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -67,7 +67,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{78B6707A-0153-4925-AFC6-28F743F7F82E}"
+          SQLTask:Connection="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}"
           SQLTask:BypassPrepare="False"
           SQLTask:SqlStatementSource="DELETE FROM Tmp.SAP_QX_Recaudo&#xA;WHERE ([Fecha de pago] &gt;= ?)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
@@ -152,8 +152,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{78B6707A-0153-4925-AFC6-28F743F7F82E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_C_DW]"
+                  connectionManagerID="{1F901585-2B0D-481B-A95A-35BFAD4F69D7}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_C_DW]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -165,26 +165,6 @@
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ConClarif]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="ConClarif"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ConClarif]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ConClarif]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Placa]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Placa"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Placa]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Placa]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Avaluo]"
-                      cachedDataType="r8"
-                      cachedName="Avaluo"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Avaluo]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Avaluo]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Impuesto]"
                       cachedDataType="r8"
@@ -203,26 +183,6 @@
                       cachedName="Intereses"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Intereses]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Intereses]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Vigencia]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Vigencia"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VIgenciaEntero]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Vigencia]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Fechadepago]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Fechadepago"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Fecha de pago]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Fechadepago]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Int_Comerc]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Int_Comerc"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IntComerc]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Int_Comerc]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Porc_DPP]"
                       cachedDataType="wstr"
@@ -255,13 +215,6 @@
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Valor Pagado]"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[ValorPagado]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Doc_Clarif]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Doc_Clarif"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DocClarif]"
-                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Doc_Clarif]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DPP]"
                       cachedDataType="r8"
                       cachedName="DPP"
@@ -274,37 +227,6 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IdRow_Union_QX_SAP]"
                       dataType="i4"
                       name="IdRow_Union_QX_SAP" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Origen]"
-                      dataType="wstr"
-                      length="1"
-                      name="Origen" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClaveEnTablaOrigen]"
-                      dataType="i4"
-                      name="ClaveEnTablaOrigen" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Placa]"
-                      dataType="wstr"
-                      length="8"
-                      name="Placa" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VIgenciaEntero]"
-                      dataType="i2"
-                      name="VIgenciaEntero" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Fecha de pago]"
-                      dataType="dbTimeStamp"
-                      name="Fecha de pago" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Avaluo]"
-                      dataType="r8"
-                      name="Avaluo" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IntComerc]"
-                      dataType="wstr"
-                      length="16"
-                      name="IntComerc" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[% DPP]"
                       dataType="wstr"
@@ -342,6 +264,37 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Valor Pagado]"
                       dataType="r8"
                       name="Valor Pagado" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Origen]"
+                      dataType="wstr"
+                      length="1"
+                      name="Origen" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ClaveEnTablaOrigen]"
+                      dataType="i4"
+                      name="ClaveEnTablaOrigen" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Placa]"
+                      dataType="wstr"
+                      length="8"
+                      name="Placa" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VIgenciaEntero]"
+                      dataType="i2"
+                      name="VIgenciaEntero" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Fecha de pago]"
+                      dataType="dbTimeStamp"
+                      name="Fecha de pago" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Avaluo]"
+                      dataType="r8"
+                      name="Avaluo" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[IntComerc]"
+                      dataType="wstr"
+                      length="16"
+                      name="IntComerc" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Por Clarif]"
                       dataType="wstr"
@@ -436,8 +389,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="{624C7A27-72BE-41BF-A647-BB96C78B1D59}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-IPD8IMB_UNOEE_2019.Impuestos_B_Stage]"
+                  connectionManagerID="{D267B2C0-3F7B-47CD-A572-7F1E694A5267}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[MIPC_UNOEE_2019.Impuestos_B_Stage]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -800,6 +753,24 @@
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[zz_FechaExtraccion]"
                       name="zz_FechaExtraccion"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[IdRow]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IdRow]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[IdRow]"
+                      name="IdRow"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[VigenciaEntero]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VigenciaEntero]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[VigenciaEntero]"
+                      name="VigenciaEntero"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -972,6 +943,14 @@
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[zz_FechaExtraccion]"
                       dataType="dbTimeStamp"
                       name="zz_FechaExtraccion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[IdRow]"
+                      dataType="i4"
+                      name="IdRow" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[VigenciaEntero]"
+                      dataType="i4"
+                      name="VigenciaEntero" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -979,6 +958,11 @@
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IdRow]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[IdRow]"
+                      name="IdRow" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[St]"
                       dataType="wstr"
@@ -1038,6 +1022,11 @@
                       length="255"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Vigencia]"
                       name="Vigencia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VigenciaEntero]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[VigenciaEntero]"
+                      name="VigenciaEntero" />
                     <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Referencia]"
                       dataType="wstr"
@@ -1225,7 +1214,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{624C7A27-72BE-41BF-A647-BB96C78B1D59}"
+          SQLTask:Connection="{D267B2C0-3F7B-47CD-A572-7F1E694A5267}"
           SQLTask:BypassPrepare="False"
           SQLTask:SqlStatementSource="SELECT MIN(Fechadepago) AS  PrimeraFecha&#xA;   FROM     SAP.Recaudo"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
